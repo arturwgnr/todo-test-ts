@@ -1,0 +1,137 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.main-div {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.main-div:hover {
+  transform: translateY(-3px);
+}
+
+.title-div {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.title-div h1 {
+  font-size: 1.8rem;
+  color: #60a5fa;
+  margin-bottom: 8px;
+}
+
+.title-div p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.crud-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.crud-area input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: #334155;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.crud-area input:focus {
+  background: #475569;
+}
+
+.crud-area button {
+  background: #6366f1;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: white;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.crud-area button:hover {
+  background: #4f46e5;
+  transform: scale(1.05);
+}
+
+.list-div ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-div li {
+  background: #334155;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.list-div li:hover {
+  background: #475569;
+  transform: translateX(3px);
+}
+
+/* Status styles */
+.list-div li.pending {
+  color: #f9fafb;
+}
+
+.list-div li.completed {
+  color: #9ca3af;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.list-div button {
+  background: #ef4444;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.list-div button:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
